@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.OutputExtensions</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.OutputExtensions.IArcPressPrinter">
+      <summary>Indicator interface that identifies the ArcPress Printer Driver.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.OutputExtensions.IArcPressPrinter.AutoSelectDriverByName(System.String)">
+      <summary>This will try to autoselect best possible driver using given printer's driver name.Fails if driver is not supported.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.OutputExtensions.IArcPressPrinter.GetColorAdjustment(System.Int32@,System.Int32@,System.Int32@,System.Int32@)">
+      <summary>Color Adjustment parameters.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.OutputExtensions.IArcPressPrinter.HalftoneTuningIndex">
+      <summary>Halftone Tuning Index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.OutputExtensions.IArcPressPrinter.LocalRasterization">
+      <summary>Indicates if Local Rasterization is used.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.OutputExtensions.IArcPressPrinter.PrintColorTuningData">
+      <summary>Print color tuning data.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.OutputExtensions.IArcPressPrinter.SavePaper">
+      <summary>Indicates if the Save Paper option is used.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.OutputExtensions.IArcPressPrinter.SelectedDriverId">
+      <summary>Selected driver id.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.OutputExtensions.IArcPressPrinter.SetColorAdjustment(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>Color Adjustment parameters.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.OutputExtensions.IArcPressPrinterEx">
+      <summary>Provides additional access to ArcPress Printer Driver.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.OutputExtensions.IArcPressPrinterEx.SelectedDriverRef">
+      <summary>Internal driver reference.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.OutputExtensions.ArcPressExtension">
+      <summary>Class that controls the ArcPress Extension.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.OutputExtensions.ArcPressExtensionClass">
+      <summary>Class that controls the ArcPress Extension.</summary>
+    </member>
+  </members>
+</doc>

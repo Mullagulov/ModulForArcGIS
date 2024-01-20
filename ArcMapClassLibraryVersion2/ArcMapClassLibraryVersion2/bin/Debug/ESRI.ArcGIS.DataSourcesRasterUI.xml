@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.DataSourcesRasterUI</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection">
+      <summary>Provides access to members that control the RasterSDE connection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection.Database">
+      <summary>The database name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection.InputBitMaskName">
+      <summary>The input 1-bit raster dataset name to be used as mask.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection.InputRasterName">
+      <summary>The input raster dataset name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection.Instance">
+      <summary>The server instance.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection.Password">
+      <summary>The sde password.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection.SdeConnection">
+      <summary>The SDE Connection, set through GxDatabase object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection.SdeRasterName">
+      <summary>The output raster dataset name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection.SdeWorkspaceName">
+      <summary>The SDE Connection, set through WorkspaceName object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection.ServerName">
+      <summary>The server name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection.UserName">
+      <summary>The sde username.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection2">
+      <summary>Provides access to members that control the RasterSDE connection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection2.Database">
+      <summary>The database name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection2.InputBitMaskName">
+      <summary>The input 1-bit raster dataset name to be used as mask.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection2.InputRasterName">
+      <summary>The input raster dataset name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection2.Instance">
+      <summary>The server instance.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection2.MaskRaster">
+      <summary>The input raster mask to be loaded to SDE.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection2.Password">
+      <summary>The sde password.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection2.Raster">
+      <summary>The input raster to be loaded to SDE.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection2.SdeConnection">
+      <summary>The SDE Connection, set through GxDatabase object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection2.SdeRasterName">
+      <summary>The output raster dataset name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection2.SdeWorkspaceName">
+      <summary>The SDE Connection, set through WorkspaceName object.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection2.ServerName">
+      <summary>The server name.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.IRasterSdeConnection2.UserName">
+      <summary>The sde username.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesRasterUI.CreateRasterDatasetDlg">
+      <summary>A coclass to show a dialog that gets user inputs for raster dataset creation.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesRasterUI.CreateRasterDatasetDlgClass">
+      <summary>A coclass to show a dialog that gets user inputs for raster dataset creation.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.CreateRasterDatasetDlgClass.Bands">
+      <summary>Number of bands of the raster dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.CreateRasterDatasetDlgClass.ICreateRasterDatasetDlg_Bands">
+      <summary>Number of bands of the raster dataset.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.DataSourcesRasterUI..">
+      <summary>A coclass to show a dialog that gets user inputs for raster dataset creation. Constructor has no input arguments.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.DataSourcesRasterUI.._">
+      <summary>A coclass to show a dialog that gets user inputs for raster dataset creation. Constructor has no input arguments.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesRasterUI.CreateRasterDatasetDlgClass.#ctor">
+      <summary>A coclass to show a dialog that gets user inputs for raster dataset creation. Constructor has no input arguments.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesRasterUI.CreateRasterDatasetDlgClass.DoModal(System.Int32)">
+      <summary>Shows the raster dataset creation dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DataSourcesRasterUI.CreateRasterDatasetDlgClass.ICreateRasterDatasetDlg_DoModal(System.Int32)">
+      <summary>Shows the raster dataset creation dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.CreateRasterDatasetDlgClass.Name">
+      <summary>The name of the raster dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.CreateRasterDatasetDlgClass.ICreateRasterDatasetDlg_Name">
+      <summary>The name of the raster dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.CreateRasterDatasetDlgClass.PixelType">
+      <summary>The pixel type of the raster dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.CreateRasterDatasetDlgClass.ICreateRasterDatasetDlg_PixelType">
+      <summary>The pixel type of the raster dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.CreateRasterDatasetDlgClass.RasterDef">
+      <summary>The definition of the raster dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.CreateRasterDatasetDlgClass.ICreateRasterDatasetDlg_RasterDef">
+      <summary>The definition of the raster dataset.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.CreateRasterDatasetDlgClass.RasterStorageDef">
+      <summary>The definition of the raster dataset storage.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.CreateRasterDatasetDlgClass.ICreateRasterDatasetDlg_RasterStorageDef">
+      <summary>The definition of the raster dataset storage.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.CreateRasterDatasetDlgClass.SupportEnterprise">
+      <summary>Indicates whether the enterprise Geodatabase is supported.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DataSourcesRasterUI.CreateRasterDatasetDlgClass.ICreateRasterDatasetDlg_SupportEnterprise">
+      <summary>Indicates whether the enterprise Geodatabase is supported.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesRasterUI.RasterSdeLoader">
+      <summary>A mechanism to control creation of SDE Raster datasets and load raster data.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DataSourcesRasterUI.RasterSdeLoaderClass">
+      <summary>A mechanism to control creation of SDE Raster datasets and load raster data.</summary>
+    </member>
+  </members>
+</doc>

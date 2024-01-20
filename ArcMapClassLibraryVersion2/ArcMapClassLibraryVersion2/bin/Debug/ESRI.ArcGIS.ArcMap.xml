@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.ArcMap</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.ArcMap.IReportDataSource">
+      <summary>Provides access to members that set the data source properties for Report reports.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMap.IReportDataSource.DefinitionQuery">
+      <summary>Indicates the definition expression for the report.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMap.IReportDataSource.Extent">
+      <summary>Indicates the extent of the report features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMap.IReportDataSource.Layer">
+      <summary>Indicates the data for the report is from a layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMap.IReportDataSource.SelectionSet">
+      <summary>Indicates the selection set for the report.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMap.IReportDataSource.Table">
+      <summary>Indicates the data for the report is from a table.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMap.IReportEngine">
+      <summary>Provides access to members that operate on the report.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMap.IReportEngine.ExportReport(System.String,System.String,ESRI.ArcGIS.ArcMap.esriReportExportType)">
+      <summary>Exports an executed report in the desired format.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMap.IReportEngine.RunReport(ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Executes the report base on the IReportDataSource properties.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMap.IReportTemplate">
+      <summary>Provides access to template members of a report.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMap.IReportTemplate.FieldMapping(System.String,System.String)">
+      <summary>Sets the field mapping from the report template to the new fields.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMap.IReportTemplate.LoadReportTemplate(System.String)">
+      <summary>Loads the report template file.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMap.IReportTemplate.RelatedReportMapping(System.String,ESRI.ArcGIS.Geodatabase.IRelationshipClass,System.String,System.String)">
+      <summary>Sets the mapping information for a related report.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMap.IReportTemplate.ReportTitle">
+      <summary>Indicates the title for the report.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.ArcMap.IReportTemplate.SaveReportTemplate(System.String)">
+      <summary>Saves the report as a template file.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.ArcMap.IReportTemplate.StartingPageNumber">
+      <summary>Indicates the starting page number for the report.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMap.Application">
+      <summary>Esri ArcMap Application</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMap.ApplicationClass">
+      <summary>Esri ArcMap Application</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.ArcMap.esriReportExportType">
+      <summary>Report export types.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMap.esriReportExportType.esriReportExportHTML">
+      <summary>Exports a Report report as HTML files.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMap.esriReportExportType.esriReportExportPDF">
+      <summary>Exports a Report report as a PDF file.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMap.esriReportExportType.esriReportExportRTF">
+      <summary>Exports a Report report as an RTF file.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMap.esriReportExportType.esriReportExportTIFF">
+      <summary>Exports a Report report as a TIFF file.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMap.esriReportExportType.esriReportExportTXT">
+      <summary>Exports a Report report as a TXT file.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.ArcMap.esriReportExportType.esriReportExportXLS">
+      <summary>Exports a Report report as an XLS file.</summary>
+    </member>
+  </members>
+</doc>

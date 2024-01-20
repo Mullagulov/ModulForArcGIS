@@ -1,0 +1,1250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.EditorExt</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.EditorExt.IAdjustLayers">
+      <summary>Provides access to members that control information about layers to be adjusted.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IAdjustLayers.AdjustSelectedFeatures">
+      <summary>Indicates if the adjustment will be made on the currently selected features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IAdjustLayers.CurrentLayers">
+      <summary>The adjustment target layers and subtype for new features.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IAdjustment">
+      <summary>Provides access to members that control the behavior of the adjustment tools.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IAdjustment.CurrentTransformationMethod">
+      <summary>The current transformation method.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IAdjustment.LimitedAdjustmentArea">
+      <summary>The area that the adjustment will be limited to.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IAdjustment.TransformationMethod(System.Int32)">
+      <summary>A transformation method by index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IAdjustment.TransformationMethodCount">
+      <summary>The number of transformation methods.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IAdjustment.UpdateExtentOnSave">
+      <summary>Indicates whether the target feature layer's extent should be recalculated when the Editor saves changes.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IAdjustmentEvents">
+      <summary>Provides access to adjustment events.  Implement it to listen for specific events that occur during an adjustment session.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IAdjustmentEvents.OnAdjustLayersChanged">
+      <summary>Called when the adjustment layers changed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IAdjustmentEvents.OnCurrentTransformationMethodChanged">
+      <summary>Called when the current transformation method changes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IAdjustmentEvents.OnLimitedAdjustmentAreaChanged">
+      <summary>Called when the limited adjustment area changed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IAdjustProperties">
+      <summary>Provides access to members that control the properties of an adjustment session.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IAdjustProperties.DisplacementLinkSymbol">
+      <summary>Symbol used to draw the displacement link.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IAdjustProperties.IdentityLinkSymbol">
+      <summary>Symbol used to draw the identity link.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IAdjustProperties.LimitedAdjustmentAreaSymbol">
+      <summary>Symbol used to draw the limited adjustment area.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IAdjustProperties.NextLinkID">
+      <summary>Link ID.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IAdjustProperties.ResetLinkID(System.Int32)">
+      <summary>Reset link ID.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IAffineTransformationMethod">
+      <summary>Provides access to the affine transformation methods.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IBufferUI">
+      <summary>Provides access to members that control the buffer dialog for buffering features in ArcMap.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IBufferUI.Application">
+      <summary>The application to which this window belongs.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IBufferUI.DoModal(System.Int32)">
+      <summary>Shows or hides the window.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IChooseObjectFromObjectsUI">
+      <summary>Provides access to members that display a dialog, that allow you to choose an object from a list.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IChooseObjectFromObjectsUI.Cursor">
+      <summary>Input Cursor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IChooseObjectFromObjectsUI.DoModal(System.Int32)">
+      <summary>Show object selection dialog. Dialog will only show if there are 2 or more features to display.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IChooseObjectFromObjectsUI.ExceptionList">
+      <summary>IDs in this list will not be shown in the dialog. Optional argument.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IChooseObjectFromObjectsUI.Layer">
+      <summary>Layer of object. Used to display the object according to the layers settings. Optional argument.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IChooseObjectFromObjectsUI.Object(ESRI.ArcGIS.Geodatabase.IObject@)">
+      <summary>Object selected in the dialog, or the one object in the cursor after the exception list was applied.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IChooseObjectFromObjectsUI.WindowTitle">
+      <summary>Title of the window. Default: Select an object.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IConformalTransformationMethod">
+      <summary>Provides access to the conformal transformation methods.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IControlPointContainer">
+      <summary>Provides access to members that maintain control points.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IControlPointContainer.AddControlPoint(System.String,ESRI.ArcGIS.esriSystem._WKSPoint@)">
+      <summary>Adds a control point.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IControlPointContainer.ControlPointCount">
+      <summary>Number of control points.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IControlPointContainer.DeleteControlPoint(System.String,ESRI.ArcGIS.esriSystem._WKSPoint@)">
+      <summary>Removes the specified control point.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IControlPointContainer.GetControlPoint(System.Int32,System.String@,ESRI.ArcGIS.esriSystem._WKSPoint@)">
+      <summary>The control point at the specified index.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IControlPointContainerEvents">
+      <summary>Provides access to events that occur when the control point container changes.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IControlPointContainerEvents_Event">
+      <summary>Provides access to events that occur when the control point container changes.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IControlPointContainerEvents.ControlPointAdded(System.String,ESRI.ArcGIS.esriSystem._WKSPoint@)">
+      <summary>Occurs when the control point is added.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.EditorExt.IControlPointContainerEvents_Event.ControlPointAdded">
+      <summary>Occurs when the control point is added.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IControlPointContainerEvents.ControlPointDeleted(System.String,ESRI.ArcGIS.esriSystem._WKSPoint@)">
+      <summary>Occurs when the control point is deleted.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.EditorExt.IControlPointContainerEvents_Event.ControlPointDeleted">
+      <summary>Occurs when the control point is deleted.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IControlPointLink">
+      <summary>Provides access to the control point link tool methods.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IControlPointLink.InitiateControlPoint(System.String,ESRI.ArcGIS.esriSystem._WKSPoint@)">
+      <summary>Initializes the control pint link, setting the control point.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IDisplacementLinkElement">
+      <summary>Provides access to members that control the displacement link element.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IDisplacementLinkElement.ID">
+      <summary>Link ID.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IDisplacementLinkElement.Symbol">
+      <summary>Line symbol this element uses to draw itself.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IEdgeMatch">
+      <summary>Provides access to members that define and manipulate edgematching.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IEdgeMatch.FindControlPoints(ESRI.ArcGIS.Geometry.IEnvelope,ESRI.ArcGIS.Geometry.IEnumGeometry@,ESRI.ArcGIS.Geometry.IEnumGeometry@)">
+      <summary>Finds the control points for the feature classes that are being matched.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IEdgeMatch.Init(ESRI.ArcGIS.Geodatabase.IFeatureClass,ESRI.ArcGIS.Geodatabase.IFeatureClass,System.Double,ESRI.ArcGIS.Editor.IFieldMap,ESRI.ArcGIS.Geometry.esriGeometryHitPartType,System.Boolean)">
+      <summary>The source and destination feature classes.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IEdgeMatchEnvironment">
+      <summary>Provides access to members that control the properties of edge match tool.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IEdgeMatchEnvironment.MatchAttributes">
+      <summary>Indicates if the attributes will be matched.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IEdgeMatchEnvironment.OneLinkPerToPoint">
+      <summary>Indicates if only one link is allowed for each to point.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IEdgeMatchEnvironment.PreventDuplicateLinks">
+      <summary>Indicates if no duplicate links will be created.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IEdgeMatchEnvironment.SourceLayer">
+      <summary>The source feature layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IEdgeMatchEnvironment.TargetLayer">
+      <summary>The destination feature layer.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IEdgeSnapTransformationMethod">
+      <summary>Provides access to the edge snap transformation methods.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IEdgeSnapTransformationMethod.AdjustAtMidpoint">
+      <summary>Indicates if both source and target features will adjust to the midpoint.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IEdgeSnapTransformationMethod.Smooth">
+      <summary>Indicates if polylines will be smoothed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IEditorSnapping">
+      <summary>Provides access to the editing specific snapping environment.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IEditorSnapping.SnapToTopologyNodes">
+      <summary>Indicates whether the topology nodes will be added to the snapping cache.  It is used when not using classic snapping.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IFieldMappingUI">
+      <summary>Provides access to members that display the field mapping UI.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IFieldMappingUI.DoModal(System.Int32,System.String,System.String)">
+      <summary>Show field mapping dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IFieldMappingUI.HideGeometryTransfer">
+      <summary>Hide geometry transfer toggle.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IFieldMappingUI.SelectedSource(System.String@)">
+      <summary>Selected source name in dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IFieldMappingUI.SelectedTarget(System.String@)">
+      <summary>Selected target name in dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IFieldMappingUI.WindowTitle">
+      <summary>Override default window title.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IFlowLayerState">
+      <summary>Provides access to members that get and set the state of the showing of flow direction symbols in the map for a given layer.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IFlowLayerState.GetFlowLayerState(ESRI.ArcGIS.Carto.IFeatureLayer)">
+      <summary>Gets the state of the showing of flow direction symbols in the map for the specified layer.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IFlowLayerState.SetFlowLayerState(ESRI.ArcGIS.Carto.IFeatureLayer,System.Boolean)">
+      <summary>Sets the state of the showing of flow direction symbols in the map for the specified layer.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IGeometricNetworkIncrementalLoader">
+      <summary>Provides access to members used to incrementally load geometric network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IGeometricNetworkIncrementalLoader.GenerateNameMapping(ESRI.ArcGIS.esriSystem.IEnumName,ESRI.ArcGIS.Geodatabase.IGeometricNetworkName,ESRI.ArcGIS.Geodatabase.IEnumNameMapping@,ESRI.ArcGIS.esriSystem.IPropertySet@)">
+      <summary>Generates a list of mappings to transfer and unmapped target fields object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IGeometricNetworkIncrementalLoader.GetUnmappedTargetFields(ESRI.ArcGIS.Geodatabase.IGeometricNetwork,ESRI.ArcGIS.Geodatabase.IEnumNameMapping,ESRI.ArcGIS.esriSystem.IPropertySet)">
+      <summary>Populates unmapped target fields object.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IGeometricNetworkIncrementalLoader.LoadNetwork(ESRI.ArcGIS.Geodatabase.IEnumNameMapping,ESRI.ArcGIS.Geodatabase.IGeometricNetwork)">
+      <summary>Loads data from source object classes to a geometric network.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IGNIncrementalLoaderUI">
+      <summary>Provides access to members that control the Geometric Network Incremental Loader UI.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IGNIncrementalLoaderUI.Application">
+      <summary>Application of the geometric network incremental data loader.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IGNIncrementalLoaderUI.Editor(ESRI.ArcGIS.Editor.IEditor@)">
+      <summary>Editor extension.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IGNIncrementalLoaderUI.Show(System.Boolean,System.Int32)">
+      <summary>Show or hide the network loader window.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IGNIncrementalLoaderUIProperties">
+      <summary>Provides access to the members that control the properties of the incremental loader.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IGNIncrementalLoaderUIProperties.FeatureClassMapping">
+      <summary>Feature class mapping.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IGNIncrementalLoaderUIProperties.TargetNetwork">
+      <summary>Target geometric network.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IGNIncrementalLoaderUIProperties.UnmappedTargetFields">
+      <summary>Unmapped target fields property set.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IIdentityLinkElement">
+      <summary>Provides access to members that control the identity link element.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IIdentityLinkElement.Symbol">
+      <summary>Marker symbol this element uses to draw itself.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ILimitedAdjustmentAreaOperation">
+      <summary>Provides access to the limited adjustment area methods.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ILimitedAdjustmentAreaOperation.Init(ESRI.ArcGIS.EditorExt.IAdjustment,ESRI.ArcGIS.Editor.IEditor,ESRI.ArcGIS.Geometry.IPolygon)">
+      <summary>Initializes the limited adjustment area operation with the new limited adjustment area.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IMapTopology">
+      <summary>Provides access to a Map topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IMapTopology.AddClass(ESRI.ArcGIS.Geodatabase.IFeatureClass)">
+      <summary>Adds a feature class to this map topology. All existing topology elements will become invalid.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IMapTopology.Cache">
+      <summary>The collection of topology elements constructed from the feature classes in this map topology.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IMapTopology.Class(System.Int32)">
+      <summary>A reference to the specified feature class in this map topology.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IMapTopology.ClassCount">
+      <summary>The count of feature classes currently participating in this map topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IMapTopology.ClearClasses">
+      <summary>Removes all feature classes from this map topology. All existing topology elements will become invalid.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IMapTopology.ClusterTolerance">
+      <summary>The cracking/clustering tolerance used when constructing topology elements from the map topology's feature class collection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IMapTopology.FindClass(ESRI.ArcGIS.Geodatabase.IFeatureClass)">
+      <summary>Finds the zero-based index of the specified feature class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IMapTopology.Name">
+      <summary>The name of this map topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IMapTopology.RemoveClass(System.Int32)">
+      <summary>Removes a feature class from this map topology. All existing topology elements will become invalid.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IMapTopology.SpatialReference">
+      <summary>The spatial reference of this map topology. By default, it is the spatial reference of the Map.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IMapTopology2">
+      <summary>Provides access to a Map topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IMapTopology2.AddLayer(ESRI.ArcGIS.Carto.IFeatureLayer)">
+      <summary>Adds a layer to this map topology. All existing topology elements will become invalid.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IMapTopology2.ClearLayers">
+      <summary>Removes all layers from this map topology. All existing topology elements will become invalid.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IMapTopology2.FindLayer(ESRI.ArcGIS.Carto.IFeatureLayer)">
+      <summary>Finds the zero-based index of the specified layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IMapTopology2.Layer(System.Int32)">
+      <summary>A reference to the specified layer in this map topology.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IMapTopology2.LayerCount">
+      <summary>The count of layers currently participating in this map topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IMapTopology2.RemoveLayer(System.Int32)">
+      <summary>Removes a layer from this map topology. All existing topology elements will become invalid.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IMapTopology2.AddClass(ESRI.ArcGIS.Geodatabase.IFeatureClass)">
+      <summary>Adds a feature class to this map topology. All existing topology elements will become invalid.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IMapTopology2.Cache">
+      <summary>The collection of topology elements constructed from the feature classes in this map topology.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IMapTopology2.Class(System.Int32)">
+      <summary>A reference to the specified feature class in this map topology.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IMapTopology2.ClassCount">
+      <summary>The count of feature classes currently participating in this map topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IMapTopology2.ClearClasses">
+      <summary>Removes all feature classes from this map topology. All existing topology elements will become invalid.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IMapTopology2.ClusterTolerance">
+      <summary>The cracking/clustering tolerance used when constructing topology elements from the map topology's feature class collection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IMapTopology2.FindClass(ESRI.ArcGIS.Geodatabase.IFeatureClass)">
+      <summary>Finds the zero-based index of the specified feature class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IMapTopology2.Name">
+      <summary>The name of this map topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IMapTopology2.RemoveClass(System.Int32)">
+      <summary>Removes a feature class from this map topology. All existing topology elements will become invalid.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IMapTopology2.SpatialReference">
+      <summary>The spatial reference of this map topology. By default, it is the spatial reference of the Map.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.INetworkAnalysisExt">
+      <summary>Provides access to members that add or remove networks and feature layers from the Network Analysis extension.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExt.AddLayer(ESRI.ArcGIS.Carto.ILayer)">
+      <summary>Adds a layer to the Network Analysis extension.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExt.AddNetwork(ESRI.ArcGIS.Geodatabase.IGeometricNetwork)">
+      <summary>Loads a geometric network into the Network Analysis extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExt.Application">
+      <summary>Parent application of the Network Analysis extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExt.CurrentNetwork">
+      <summary>Current network being used by the Network Analysis extension.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExt.DeleteNetwork(ESRI.ArcGIS.Geodatabase.IGeometricNetwork)">
+      <summary>Unloads a geometric network from the Network Analysis extension.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExt.DropLayer(ESRI.ArcGIS.Carto.ILayer)">
+      <summary>Removes a layer from the Network Analysis extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExt.FeatureLayer(System.Int32)">
+      <summary>The feature layer in the Network Analysis extension in the specified index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExt.FeatureLayerCount">
+      <summary>The number of feature layers currently loaded into the Network Analysis extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExt.Network(System.Int32)">
+      <summary>Geometric network in the Network Analysis extension by index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExt.NetworkCount">
+      <summary>Number of geometric networks currently loaded into the Network Analysis extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExt.SnapTolerance">
+      <summary>Snap tolerance, in pixels, for placing flags and barriers on the map.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtBarriers">
+      <summary>Provides access to members that manage barriers in the Network Analysis extension.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtBarriers.AddEdgeBarrier(ESRI.ArcGIS.NetworkAnalysis.IEdgeFlagDisplay)">
+      <summary>Adds an edge barrier to the current network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtBarriers.AddJunctionBarrier(ESRI.ArcGIS.NetworkAnalysis.IJunctionFlagDisplay)">
+      <summary>Adds a junction barrier to the current network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtBarriers.ClearBarriers">
+      <summary>Removes all barriers from the current network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtBarriers.CreateElementBarriers(ESRI.ArcGIS.NetworkAnalysis.INetElementBarriers@,ESRI.ArcGIS.NetworkAnalysis.INetElementBarriers@)">
+      <summary>Returns a NetElementBarriers object corresponding to the barriers added to the current network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtBarriers.CreateSelectionBarriers(ESRI.ArcGIS.NetworkAnalysis.ISelectionSetBarriers@)">
+      <summary>Returns a SelectionSetBarriers object corresponding to the currently selected features in the current network and the SelectionSemantics property.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtBarriers.EdgeBarrier(System.Int32)">
+      <summary>Edge barrier on the current network by index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtBarriers.EdgeBarrierCount">
+      <summary>Number of edge barriers on the current network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtBarriers.GetDisabledLayer(ESRI.ArcGIS.Carto.IFeatureLayer)">
+      <summary>Gets the disabled state for the specified feature layer.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtBarriers.JunctionBarrier(System.Int32)">
+      <summary>Junction barrier on the current network by index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtBarriers.JunctionBarrierCount">
+      <summary>Number of junction barriers on the current network.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtBarriers.SelectionSemantics">
+      <summary>Indicates if trace tasks are performed on selected features, unselected features, or all features.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtBarriers.SetDisabledLayer(ESRI.ArcGIS.Carto.IFeatureLayer,System.Boolean)">
+      <summary>Sets the disabled state for the specified feature layer.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtFlags">
+      <summary>Provides access to members that manage flags in the Network Analysis extension.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtFlags.AddEdgeFlag(ESRI.ArcGIS.NetworkAnalysis.IEdgeFlagDisplay)">
+      <summary>Adds an edge flag to the current network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtFlags.AddJunctionFlag(ESRI.ArcGIS.NetworkAnalysis.IJunctionFlagDisplay)">
+      <summary>Adds a junction flag to the current network.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtFlags.ClearFlags">
+      <summary>Removes all flags from the current network.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtFlags.EdgeFlag(System.Int32)">
+      <summary>Edge flag on the current network by index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtFlags.EdgeFlagCount">
+      <summary>Number of edge flags on the current network.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtFlags.JunctionFlag(System.Int32)">
+      <summary>Junction flag on the current network by index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtFlags.JunctionFlagCount">
+      <summary>Number of junction flags on the current network.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtResultColor">
+      <summary>Provides access to members that handle the color used for rendering trace task results.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtResultColor.Color">
+      <summary>Current trace task result color.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtResults">
+      <summary>Provides access to members that set and clear the trace task results.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtResults.ClearResults">
+      <summary>Clears the current results.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtResults.CreateSelection(ESRI.ArcGIS.Geodatabase.IEnumNetEID,ESRI.ArcGIS.Geodatabase.IEnumNetEID)">
+      <summary>Creates a selection set from the specified set of network elements.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtResults.DrawComplex">
+      <summary>Indicates if sub elements of complex edges are rendered individually in the results.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtResults.ResultFeatureCount">
+      <summary>Number of elements in the current results.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtResults.ResultsAsSelection">
+      <summary>Indicates if results are returned as a selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtResults.SetResults(ESRI.ArcGIS.Geodatabase.IEnumNetEID,ESRI.ArcGIS.Geodatabase.IEnumNetEID)">
+      <summary>Sets the current results to the specified network elements.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtWeightFilter">
+      <summary>Provides access to members that set and return the weight filter information to be used when performing trace tasks.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtWeightFilter.AddFilterRange(ESRI.ArcGIS.Geodatabase.esriElementType,System.Object,System.Object)">
+      <summary>Adds a range of values to be filtered for the specified network element type.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtWeightFilter.ClearRanges(ESRI.ArcGIS.Geodatabase.esriElementType)">
+      <summary>Clears all filter ranges for the specified network element type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtWeightFilter.FilterRangeCount(ESRI.ArcGIS.Geodatabase.esriElementType)">
+      <summary>Number of filter ranges for the specified network element type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtWeightFilter.FromToEdgeWeightFilterName">
+      <summary>Name of the weight to be used for filtering edge elements traced in the digitized direction.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtWeightFilter.GetFilterRange(ESRI.ArcGIS.Geodatabase.esriElementType,System.Int32,System.Object@,System.Object@)">
+      <summary>Returns a filter range by index for the specified network element type.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtWeightFilter.GetFilterType(ESRI.ArcGIS.Geodatabase.esriElementType,ESRI.ArcGIS.NetworkAnalysis.esriWeightFilterType@,System.Boolean@)">
+      <summary>Gets the filter type for the specified network element type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtWeightFilter.JunctionWeightFilterName">
+      <summary>Name of the weight to be used for filtering junction elements.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtWeightFilter.SetFilterType(ESRI.ArcGIS.Geodatabase.esriElementType,ESRI.ArcGIS.NetworkAnalysis.esriWeightFilterType,System.Boolean)">
+      <summary>Sets the filter type for the specified network element type.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtWeightFilter.ToFromEdgeWeightFilterName">
+      <summary>Name of the weight to be used for filtering edge elements traced against the digitized direction.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtWeights">
+      <summary>Provides access to members that set and return the weights to be used when performing trace tasks.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtWeights.FromToEdgeWeightName">
+      <summary>Weight to be used to determine the cost of traversing edge elements in the digitized direction.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtWeights.JunctionWeightName">
+      <summary>Weight to be used to determine the cost of passing through junction elements.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INetworkAnalysisExtWeights.ToFromEdgeWeightName">
+      <summary>Weight to be used to determine the cost of traversing edge elements against the digitized direction.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.INewLinkElementOperation">
+      <summary>Provides access to the new link element methods.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.INewLinkElementOperation.ControlPoint(System.String,ESRI.ArcGIS.esriSystem._WKSPoint@)">
+      <summary>The control point.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IObjectLoader">
+      <summary>Provides access to members that are used to load an object to an existing featureclass or table.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IObjectLoader.LoadObjects(ESRI.ArcGIS.Editor.IEditor,ESRI.ArcGIS.Geodatabase.ITable,ESRI.ArcGIS.Geodatabase.IQueryFilter,ESRI.ArcGIS.Geodatabase.ITable,ESRI.ArcGIS.Geodatabase.IFields,System.Boolean,System.Int32,System.Boolean,System.Boolean,System.Int32,ESRI.ArcGIS.Geodatabase.IEnumInvalidObject@)">
+      <summary>Loads an object into an existing object class.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IObjectLoader2">
+      <summary>Provides access to members that are used to load an object to an existing featureclass or table.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IObjectLoader2.LoadObjectsTemplate(ESRI.ArcGIS.Editor.IEditor,ESRI.ArcGIS.Geodatabase.ITable,ESRI.ArcGIS.Geodatabase.IQueryFilter,ESRI.ArcGIS.Carto.IEditTemplate,ESRI.ArcGIS.Geodatabase.ITable,ESRI.ArcGIS.Geodatabase.IFields,System.Boolean,System.Boolean,System.Int32,ESRI.ArcGIS.Geodatabase.IEnumInvalidObject@)">
+      <summary>Loads an object into an existing object class.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IObjectLoader2.LoadObjects(ESRI.ArcGIS.Editor.IEditor,ESRI.ArcGIS.Geodatabase.ITable,ESRI.ArcGIS.Geodatabase.IQueryFilter,ESRI.ArcGIS.Geodatabase.ITable,ESRI.ArcGIS.Geodatabase.IFields,System.Boolean,System.Int32,System.Boolean,System.Boolean,System.Int32,ESRI.ArcGIS.Geodatabase.IEnumInvalidObject@)">
+      <summary>Loads an object into an existing object class.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IObjectLoaderUI">
+      <summary>Provides access to members that control the Object Loader UI.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IObjectLoaderUI.Application">
+      <summary>Application of the Object/Simple data loader.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IObjectLoaderUI.Editor(ESRI.ArcGIS.Editor.IEditor@)">
+      <summary>Editor extension.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IObjectLoaderUI.Show(System.Boolean,System.Boolean,System.Int32)">
+      <summary>Show or hide the object loader window.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IObjectLoaderUIProperties">
+      <summary>Provides access to the members that control the properties of the object loader.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IObjectLoaderUIProperties.DataSourceCount">
+      <summary>Data source count that will be loaded into the target object class.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IObjectLoaderUIProperties.DeleteAllSources">
+      <summary>Clear the data sources list.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IObjectLoaderUIProperties.DeleteSourceFullName(ESRI.ArcGIS.esriSystem.IName)">
+      <summary>Delete a data source from the list of sources.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IObjectLoaderUIProperties.GetSourceFullName(System.Int32)">
+      <summary>Data source at specific index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IObjectLoaderUIProperties.InputFields">
+      <summary>Source fields that will be loaded into the target object class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IObjectLoaderUIProperties.LoadWithSnap">
+      <summary>Indicates if snapping should be used during the load.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IObjectLoaderUIProperties.LoadWithValidation">
+      <summary>Indicates if validation rules should be applied.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IObjectLoaderUIProperties.ObjectLoaderQueryFilter">
+      <summary>Query filter to use on the source data.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IObjectLoaderUIProperties.OutputFields">
+      <summary>Fields in the target object class that will be loaded from the source.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IObjectLoaderUIProperties.SetSubTypeCode">
+      <summary>Indicates if the TargetSubTypeCode should be used or ignored.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IObjectLoaderUIProperties.SourceFullName">
+      <summary>Data source to be loaded into the target object class.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IObjectLoaderUIProperties.TargetSubTypeCode">
+      <summary>Target object class subtype code.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IObjectLoaderUIProperties.TargetTable">
+      <summary>Loader target object class.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IPiecewiseTransformation">
+      <summary>Provides access to members that define and manipulate piecewise transformations.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IPiecewiseTransformation.DefineFromControlPoints(System.Boolean,System.Int32,ESRI.ArcGIS.Geometry.IPoint@,ESRI.ArcGIS.Geometry.IPoint@,ESRI.ArcGIS.Geometry.IEnumGeometry,ESRI.ArcGIS.Geometry.IEnvelope)">
+      <summary>Defines the best transformation between a set of points.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IPiecewiseTransformationGEN">
+      <summary>Provides access to members that define and manipulate piecewise transformations. IPiecewiseTransformationGEN is generic version of IPiecewiseTransformation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IPiecewiseTransformationGEN.DefineFromControlPoints(System.Boolean,ESRI.ArcGIS.Geometry.IPoint[]@,ESRI.ArcGIS.Geometry.IPoint[]@,ESRI.ArcGIS.Geometry.IEnumGeometry,ESRI.ArcGIS.Geometry.IEnvelope)">
+      <summary>Defines the best transformation between a set of points.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IPiecewiseTransformationGEN.TransformMeasuresFF(ESRI.ArcGIS.Geometry.esriTransformDirection,System.Double[]@,System.Double[]@)">
+      <summary>Transforms floating point measures to floating point measures (or do the inverse).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IPiecewiseTransformationGEN.TransformMeasuresFI(ESRI.ArcGIS.Geometry.esriTransformDirection,System.Double[]@,System.Int32[]@)">
+      <summary>Transforms floating point measures to integer measures (or do the inverse).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IPiecewiseTransformationGEN.TransformMeasuresIF(ESRI.ArcGIS.Geometry.esriTransformDirection,System.Int32[]@,System.Double[]@)">
+      <summary>Transforms integer measures to floating point measures (or do the inverse).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IPiecewiseTransformationGEN.TransformMeasuresII(ESRI.ArcGIS.Geometry.esriTransformDirection,System.Int32[]@,System.Int32[]@)">
+      <summary>Transforms integer measures to integer measures (or do the inverse).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IPiecewiseTransformationGEN.TransformPointsFF(ESRI.ArcGIS.Geometry.esriTransformDirection,System.Double[]@,System.Double[]@)">
+      <summary>Transforms floating point points to floating point points (or do the inverse).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IPiecewiseTransformationGEN.TransformPointsFI(ESRI.ArcGIS.Geometry.esriTransformDirection,System.Double[]@,System.Int32[]@)">
+      <summary>Transforms floating point points to integer points (or do the inverse).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IPiecewiseTransformationGEN.TransformPointsIF(ESRI.ArcGIS.Geometry.esriTransformDirection,System.Int32[]@,System.Double[]@)">
+      <summary>Transforms integer points to floating point points (or do the inverse).</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IPiecewiseTransformationGEN.TransformPointsII(ESRI.ArcGIS.Geometry.esriTransformDirection,System.Int32[]@,System.Int32[]@)">
+      <summary>Transforms integer points to integer points (or do the inverse).</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IPiecewiseTransformationMethod">
+      <summary>Provides access to the piecewise transformation methods.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IPiecewiseTransformationMethod.NaturalNeighbor">
+      <summary>Indicates whether to use the natural neighbor algorithm.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IProjectiveTransformationMethod">
+      <summary>Provides access to the projective transformation methods.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IProtectNameEditorExt">
+      <summary>Provides access to dummy methods protecting name correctness.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IProtectNameEditorExt.ProtectOLE_COLOR(System.Int32)">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.IProtectNameEditorExt.ProtectOLE_HANDLE(System.Int32)">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ISharedFeaturesWindowAdmin">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ISharedFeaturesWindowAdmin.hWnd">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITabletExt">
+      <summary>Provides access to the Tablet support extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITabletExt.AlwaysShowAlternates">
+      <summary>Indicates whether the alternates dialog should be shown if the recognition confidence is high.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITabletExt.AutoRecognizeInkGraphics">
+      <summary>Indicates whether Ink Graphics should automatically re-recognize themselves when updated.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITabletExt.Clear">
+      <summary>Deletes any active ink from the screen.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITabletExt.GeneralizeInk">
+      <summary>Indicates whether the Ink should be generalized before any commit.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITabletExt.InkCollectionMode">
+      <summary>Indicates if the extension is collecting ink.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITabletExt.InkGeometry">
+      <summary>The current Ink sketch as a geometry.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITabletExt.PressureSensitiveStylus">
+      <summary>Indicates whether the stylus should be pressure sensitive.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITabletExt.ProjectInkGraphicGeometry">
+      <summary>Indicates whether Ink Graphics should be rendered as polylines when projected.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITabletExt.ScratchoutEnabled">
+      <summary>Indicates whether the scratch-out gesture should be enabled.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITabletExt.Start(System.Boolean)">
+      <summary>Starts obtaining ink from the stylus.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITabletExt.Stop(System.Boolean)">
+      <summary>Stops obtaining ink from the stylus.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITabletExt.ToolCommitDelay">
+      <summary>The auto commit delay interval in seconds.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITabletExt.ToolCommitType">
+      <summary>The ink tool commit type.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITabletExtEvents">
+      <summary>Provides access to the tablet support extension events.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITabletExtEvents_Event">
+      <summary>Provides access to the tablet support extension events.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITabletExtEvents.OnGesture(ESRI.ArcGIS.EditorExt.ESRITPCGestures,System.Object)">
+      <summary>Occurs when an ink gesture is made.  Only available on TabletPC devices.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.EditorExt.ITabletExtEvents_Event.OnGesture">
+      <summary>Occurs when an ink gesture is made.  Only available on TabletPC devices.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITabletExtEvents.OnStart">
+      <summary>Occurs when an ink collection is started.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.EditorExt.ITabletExtEvents_Event.OnStart">
+      <summary>Occurs when an ink collection is started.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITabletExtEvents.OnStop">
+      <summary>Occurs when an ink collection is halted.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.EditorExt.ITabletExtEvents_Event.OnStop">
+      <summary>Occurs when an ink collection is halted.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITopologyExtension">
+      <summary>Provides access to members that control a topology.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension.ActiveError(System.Int32)">
+      <summary>The current active error.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension.ActiveErrorCount">
+      <summary>The number of selected topology errors.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension.ActiveErrorGeometryType">
+      <summary>The geometry type of the selected error.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension.ActiveErrorRuleType">
+      <summary>The topology rule type of the selected error.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension.AddActiveError(ESRI.ArcGIS.Geodatabase.ITopologyErrorFeature,ESRI.ArcGIS.EditorExt.esriTEEventHint)">
+      <summary>Adds a topology error to the selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension.ClearActiveErrors(ESRI.ArcGIS.EditorExt.esriTEEventHint)">
+      <summary>Clears the topology error selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension.CurrentTopology">
+      <summary>The current topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension.DelayEvents(System.Boolean)">
+      <summary>Used to batch operations together and minimize notifications.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension.ErrorSymbol(ESRI.ArcGIS.Geometry.esriGeometryType)">
+      <summary>Symbol used to draw topology errors.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension.FindActiveError(ESRI.ArcGIS.Geodatabase.ITopologyErrorFeature)">
+      <summary>Indicates whether a given error is in the topology error selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension.MapTopology">
+      <summary>The current map topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension.RemoveActiveError(ESRI.ArcGIS.Geodatabase.ITopologyErrorFeature,ESRI.ArcGIS.EditorExt.esriTEEventHint)">
+      <summary>Removes a topology error from the selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension.TopologySelectionChanged">
+      <summary>Call to notify listeners that the topology selection has changed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension.TopologySymbol(ESRI.ArcGIS.EditorExt.esriTopologyElementSymbol)">
+      <summary>Symbol used to draw topology elements.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITopologyExtension2">
+      <summary>Provides access to additional members that control the topology extension.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension2.TopologyGraphBuilt">
+      <summary>Notifies the topology extension that the current topology graph has been (re)built and that interested clients should be notified.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension2.ActiveError(System.Int32)">
+      <summary>The current active error.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension2.ActiveErrorCount">
+      <summary>The number of selected topology errors.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension2.ActiveErrorGeometryType">
+      <summary>The geometry type of the selected error.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension2.ActiveErrorRuleType">
+      <summary>The topology rule type of the selected error.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension2.AddActiveError(ESRI.ArcGIS.Geodatabase.ITopologyErrorFeature,ESRI.ArcGIS.EditorExt.esriTEEventHint)">
+      <summary>Adds a topology error to the selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension2.ClearActiveErrors(ESRI.ArcGIS.EditorExt.esriTEEventHint)">
+      <summary>Clears the topology error selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension2.CurrentTopology">
+      <summary>The current topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension2.DelayEvents(System.Boolean)">
+      <summary>Used to batch operations together and minimize notifications.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension2.ErrorSymbol(ESRI.ArcGIS.Geometry.esriGeometryType)">
+      <summary>Symbol used to draw topology errors.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension2.FindActiveError(ESRI.ArcGIS.Geodatabase.ITopologyErrorFeature)">
+      <summary>Indicates whether a given error is in the topology error selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension2.MapTopology">
+      <summary>The current map topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension2.RemoveActiveError(ESRI.ArcGIS.Geodatabase.ITopologyErrorFeature,ESRI.ArcGIS.EditorExt.esriTEEventHint)">
+      <summary>Removes a topology error from the selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension2.TopologySelectionChanged">
+      <summary>Call to notify listeners that the topology selection has changed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension2.TopologySymbol(ESRI.ArcGIS.EditorExt.esriTopologyElementSymbol)">
+      <summary>Symbol used to draw topology elements.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITopologyExtension3">
+      <summary>Provides access to additional members that control the topology extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension3.AutoRebuildCache">
+      <summary>Indicates whether the topology graph will ba automatically rebuilt based on current visible extent.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension3.TopologyGraphBuilt">
+      <summary>Notifies the topology extension that the current topology graph has been (re)built and that interested clients should be notified.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension3.ActiveError(System.Int32)">
+      <summary>The current active error.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension3.ActiveErrorCount">
+      <summary>The number of selected topology errors.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension3.ActiveErrorGeometryType">
+      <summary>The geometry type of the selected error.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension3.ActiveErrorRuleType">
+      <summary>The topology rule type of the selected error.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension3.AddActiveError(ESRI.ArcGIS.Geodatabase.ITopologyErrorFeature,ESRI.ArcGIS.EditorExt.esriTEEventHint)">
+      <summary>Adds a topology error to the selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension3.ClearActiveErrors(ESRI.ArcGIS.EditorExt.esriTEEventHint)">
+      <summary>Clears the topology error selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension3.CurrentTopology">
+      <summary>The current topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension3.DelayEvents(System.Boolean)">
+      <summary>Used to batch operations together and minimize notifications.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension3.ErrorSymbol(ESRI.ArcGIS.Geometry.esriGeometryType)">
+      <summary>Symbol used to draw topology errors.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension3.FindActiveError(ESRI.ArcGIS.Geodatabase.ITopologyErrorFeature)">
+      <summary>Indicates whether a given error is in the topology error selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension3.MapTopology">
+      <summary>The current map topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension3.RemoveActiveError(ESRI.ArcGIS.Geodatabase.ITopologyErrorFeature,ESRI.ArcGIS.EditorExt.esriTEEventHint)">
+      <summary>Removes a topology error from the selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension3.TopologySelectionChanged">
+      <summary>Call to notify listeners that the topology selection has changed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension3.TopologySymbol(ESRI.ArcGIS.EditorExt.esriTopologyElementSymbol)">
+      <summary>Symbol used to draw topology elements.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITopologyExtension4">
+      <summary>Provides access to additional members that control the topology extension.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension4.ReshapeConnectivity">
+      <summary>Indicates whether a topology path reshape will maintain connectivity with adjacent features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension4.StretchTopology">
+      <summary>Indicates whether topology elements will be stretched proportionally.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension4.AutoRebuildCache">
+      <summary>Indicates whether the topology graph will ba automatically rebuilt based on current visible extent.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension4.TopologyGraphBuilt">
+      <summary>Notifies the topology extension that the current topology graph has been (re)built and that interested clients should be notified.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension4.ActiveError(System.Int32)">
+      <summary>The current active error.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension4.ActiveErrorCount">
+      <summary>The number of selected topology errors.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension4.ActiveErrorGeometryType">
+      <summary>The geometry type of the selected error.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension4.ActiveErrorRuleType">
+      <summary>The topology rule type of the selected error.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension4.AddActiveError(ESRI.ArcGIS.Geodatabase.ITopologyErrorFeature,ESRI.ArcGIS.EditorExt.esriTEEventHint)">
+      <summary>Adds a topology error to the selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension4.ClearActiveErrors(ESRI.ArcGIS.EditorExt.esriTEEventHint)">
+      <summary>Clears the topology error selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension4.CurrentTopology">
+      <summary>The current topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension4.DelayEvents(System.Boolean)">
+      <summary>Used to batch operations together and minimize notifications.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension4.ErrorSymbol(ESRI.ArcGIS.Geometry.esriGeometryType)">
+      <summary>Symbol used to draw topology errors.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension4.FindActiveError(ESRI.ArcGIS.Geodatabase.ITopologyErrorFeature)">
+      <summary>Indicates whether a given error is in the topology error selection.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension4.MapTopology">
+      <summary>The current map topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension4.RemoveActiveError(ESRI.ArcGIS.Geodatabase.ITopologyErrorFeature,ESRI.ArcGIS.EditorExt.esriTEEventHint)">
+      <summary>Removes a topology error from the selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtension4.TopologySelectionChanged">
+      <summary>Call to notify listeners that the topology selection has changed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITopologyExtension4.TopologySymbol(ESRI.ArcGIS.EditorExt.esriTopologyElementSymbol)">
+      <summary>Symbol used to draw topology elements.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITopologyExtensionEvents">
+      <summary>Provides access to events that occur when working with a topology.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITopologyExtensionEvents_Event">
+      <summary>Provides access to events that occur when working with a topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtensionEvents.OnActiveErrorsChanged(ESRI.ArcGIS.EditorExt.esriTEEventHint)">
+      <summary>Called when the active error selection is changed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.EditorExt.ITopologyExtensionEvents_Event.OnActiveErrorsChanged">
+      <summary>Called when the active error selection is changed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtensionEvents.OnCurrentTopologyChanged">
+      <summary>Called when the current topology is changed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.EditorExt.ITopologyExtensionEvents_Event.OnCurrentTopologyChanged">
+      <summary>Called when the current topology is changed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtensionEvents.OnErrorDeleted(ESRI.ArcGIS.Geodatabase.ITopologyErrorFeature)">
+      <summary>Called when a topology error is deleted.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.EditorExt.ITopologyExtensionEvents_Event.OnErrorDeleted">
+      <summary>Called when a topology error is deleted.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtensionEvents.OnTopologySelectionChanged">
+      <summary>Called when the topology element selection is changed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.EditorExt.ITopologyExtensionEvents_Event.OnTopologySelectionChanged">
+      <summary>Called when the topology element selection is changed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtensionEvents.OnValidate">
+      <summary>Called when a topology is validated.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.EditorExt.ITopologyExtensionEvents_Event.OnValidate">
+      <summary>Called when a topology is validated.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITopologyExtensionEvents2">
+      <summary>Provides access to more events that occur when working with a topology.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITopologyExtensionEvents2_Event">
+      <summary>Provides access to more events that occur when working with a topology.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITopologyExtensionEvents2.OnTopologyGraphBuild">
+      <summary>Called after the topology graph associated with the current topology (either the map or a database topology) has been (re)built. Clients should release references to any existing topo elements.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.EditorExt.ITopologyExtensionEvents2_Event.OnTopologyGraphBuild">
+      <summary>Called after the topology graph associated with the current topology (either the map or a database topology) has been (re)built. Clients should release references to any existing topo elements.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITracePathTaskResults">
+      <summary>Provides access to members that return cost information about the path or tree found by certain trace tasks.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITracePathTaskResults.SegmentCost(System.Int32)">
+      <summary>Cost of tracing the elements in the specified segment of the trace results.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITracePathTaskResults.TotalCost">
+      <summary>Total cost of tracing all elements in the trace results.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITraceTask">
+      <summary>Provides access to members that execute a trace task.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITraceTask.EnableSolve">
+      <summary>Indicates if the trace task is ready to be executed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITraceTask.Name">
+      <summary>Name of the trace task.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITraceTask.OnCreate(ESRI.ArcGIS.EditorExt.IUtilityNetworkAnalysisExt)">
+      <summary>Initializes the trace task.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITraceTask.OnTraceExecution">
+      <summary>Executes the trace task.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITraceTaskResults">
+      <summary>Provides access to members that return the network elements returned by the trace task.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITraceTaskResults.ResultEdges">
+      <summary>Edges in the trace task result.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITraceTaskResults.ResultJunctions">
+      <summary>Junctions in the trace task result.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITraceTasks">
+      <summary>Provides access to members that set and return the current trace task and the options for tracing.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITraceTasks.CurrentTask">
+      <summary>Current trace task.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITraceTasks.Task(System.Int32)">
+      <summary>Trace task by index.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITraceTasks.TaskCount">
+      <summary>Number of available trace tasks.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITraceTasks.TraceEnds">
+      <summary>Indicates if trace tasks return end features.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITraceTasks.TraceFlowElements">
+      <summary>Elements to include in the trace results.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITraceTasks.TraceIndeterminateFlow">
+      <summary>Indicates if directional traces include features with indeterminate or uninitialized flow direction.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITrackingTool">
+      <summary>Provides access to the track tool methods.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITrackingTool.Add(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>The point to add.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITrackingTool.Remove(ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>The point to remove.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITrackPointOperation">
+      <summary>Provides access to the track point operation methods.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITrackPointOperation.Init(ESRI.ArcGIS.EditorExt.ITrackingTool,ESRI.ArcGIS.Geometry.IPoint)">
+      <summary>Initializes the track point operation, setting the control point.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITransformationErrorImpl">
+      <summary>Provides access to transformation errors.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITransformationErrorImpl.ClearErrors">
+      <summary>Clears the errors.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITransformationErrorImpl.get_Errors">
+      <summary>Gets the errors.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITransformationMethod">
+      <summary>Provides access to transformation method.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITransformationMethod.DefineFromControlPoints(System.Int32,ESRI.ArcGIS.Geometry.IPoint@,ESRI.ArcGIS.Geometry.IPoint@,ESRI.ArcGIS.Geometry.IEnumGeometry,ESRI.ArcGIS.Geometry.IEnvelope)">
+      <summary>Defines the best transformation between a set of points.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITransformationMethod.MinNumDisplacementPoints">
+      <summary>The minumum number of displacement points required for this transformation method.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITransformationMethod.Name">
+      <summary>The name of the transformation method.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITransformationMethod.SupportsIdentityLinks">
+      <summary>Indicates if the transformation method supports identity links.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITransformationMethod.Transform(ESRI.ArcGIS.Geodatabase.IFeatureCursor,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Transforms the given features.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITransformationMethod.TransformElement(ESRI.ArcGIS.Carto.IElement)">
+      <summary>Transforms the given element.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITransformationMethod.TransformShape(ESRI.ArcGIS.Geometry.IGeometry)">
+      <summary>Transforms the given geometry.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITransformationMethodGEN">
+      <summary>Provides access to transformation method. ITransformationMethodGEN is generic version of ITransformationMethod.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITransformationMethodGEN.DefineFromControlPoints(ESRI.ArcGIS.Geometry.IPoint[]@,ESRI.ArcGIS.Geometry.IPoint[]@,ESRI.ArcGIS.Geometry.IEnumGeometry,ESRI.ArcGIS.Geometry.IEnvelope)">
+      <summary>Defines the best transformation between a set of points.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITransformationMethodGEN.MinNumDisplacementPoints">
+      <summary>The minumum number of displacement points required for this transformation method.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITransformationMethodGEN.Name">
+      <summary>The name of the transformation method.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.ITransformationMethodGEN.SupportsIdentityLinks">
+      <summary>Indicates if the transformation method supports identity links.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITransformationMethodGEN.Transform(ESRI.ArcGIS.Geodatabase.IFeatureCursor,ESRI.ArcGIS.esriSystem.ITrackCancel)">
+      <summary>Transforms the given features.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITransformationMethodGEN.TransformElement(ESRI.ArcGIS.Carto.IElement)">
+      <summary>Transforms the given element.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITransformationMethodGEN.TransformShape(ESRI.ArcGIS.Geometry.IGeometry)">
+      <summary>Transforms the given geometry.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITransformationMethodRMSError">
+      <summary>Provides access to transformation method RMS error.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITransformationMethodRMSError.GetControlPointError(System.Int32,System.Double@)">
+      <summary>Returns the errors involved in moving control point i from the 'from' to 'to' system. These error terms are valid after using DefineFromControlPoints to define the transformation.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITransformationMethodRMSError.GetRMSError(System.Double@)">
+      <summary>RMS (Root Mean Square) error expressed relative to the 'from' and 'to' points defining the transformation. These error terms are valid after using DefineFromControlPoints to define the transformation.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ITransformedFeatureCursorFactory">
+      <summary>Provides access to creating a transformed feature cursor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.EditorExt.ITransformedFeatureCursorFactory.Create(ESRI.ArcGIS.Geodatabase.IFeatureCursor,ESRI.ArcGIS.EditorExt.ITransformationMethod)">
+      <summary>Create the transform feature cursor from the input.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IUtilityNetworkAnalysisExt">
+      <summary>Provides access to a member that determines whether flow direction can be set for the current network.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IUtilityNetworkAnalysisExt.EnableSetFlowDirection">
+      <summary>Indicates if flow direction can be set for the current network.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.IUtilityNetworkAnalysisExtFlow">
+      <summary>Provides access to members that set and return the options for showing flow direction.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IUtilityNetworkAnalysisExtFlow.ArrowSymbol">
+      <summary>Symbol used (usually an arrow symbol) for indicating determinate flow.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IUtilityNetworkAnalysisExtFlow.IndeterminateSymbol">
+      <summary>Symbol used for indicating indeterminate flow.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IUtilityNetworkAnalysisExtFlow.MaxScale">
+      <summary>Maximum map scale for which flow direction symbols are shown in the map.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IUtilityNetworkAnalysisExtFlow.MinScale">
+      <summary>Minimum map scale for which flow direction symbols are shown in the map.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IUtilityNetworkAnalysisExtFlow.ShowAtAllScales">
+      <summary>Indicates if flow direction symbols for the current network are shown at all map scales.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IUtilityNetworkAnalysisExtFlow.ShowFlow">
+      <summary>Indicates if flow direction symbols for the current network are shown in the map.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.EditorExt.IUtilityNetworkAnalysisExtFlow.UninitializedSymbol">
+      <summary>Symbol used for indicating uninitialized flow.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.Adjustment">
+      <summary>The Adjustment Tools Editor Extension.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.AdjustmentClass">
+      <summary>The Adjustment Tools Editor Extension.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.esriAnalysisType">
+      <summary>Indicates if trace tasks can trace on selected features, unselected features, or all features.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.esriAnalysisType.esriAnalysisOnAllFeatures">
+      <summary>Traces on both selected and unselected features.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.esriAnalysisType.esriAnalysisOnSelectedFeatures">
+      <summary>Traces only on selected features.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.esriAnalysisType.esriAnalysisOnNonSelectedFeatures">
+      <summary>Traces only on unselected features.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.esriTEEventHint">
+      <summary>Identifies the method triggering the topology event.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.esriTEEventHint.esriTENone">
+      <summary>No event.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.esriTEEventHint.esriTEFixedActiveErrors">
+      <summary>Active Error fixed.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.esriTEEventHint.esriTEDeletedActiveErrors">
+      <summary>Active Error deleted.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.esriTEEventHint.esriTEValidate">
+      <summary>Validate.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.esriTopologyElementSymbol">
+      <summary>Defines the topology element symbology.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.esriTopologyElementSymbol.esriTESelectedNodeSymbol">
+      <summary>Selected topology node symbol.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.esriTopologyElementSymbol.esriTESelectedEdgeSymbol">
+      <summary>Selected topology edge symbol.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.esriTopologyElementSymbol.esriTENodeSymbol">
+      <summary>Unselected topology node symbol.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ESRITPCGestures">
+      <summary>Ink gesture enumeration.  These codes are returned by the OnGesture event when a particular gesture is recognized.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCGestures.ETPC_DownLeft">
+      <summary>Down left gesture.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCGestures.ETPC_RightUp">
+      <summary>Right up gesture.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCGestures.ETPC_Scratchout">
+      <summary>Scratchout gesture.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCGestures.ETPC_ChevronLeft">
+      <summary>Chevron left gesture.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCGestures.ETPC_ChevronRight">
+      <summary>Chevron right gesture.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCGestures.ETPC_ChevronUp">
+      <summary>Chevron up gesture.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCGestures.ETPC_ChevronDown">
+      <summary>Chevron down gesture.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCGestures.ETPC_SemiCircleLeft">
+      <summary>Semicircle left gesture.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCGestures.ETPC_SemiCircleRight">
+      <summary>Semicircle right gesture.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCGestures.ETPC_ArrowLeft">
+      <summary>Arrow left gesture.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCGestures.ETPC_ArrowRight">
+      <summary>Arrow right gesture.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCGestures.ETPC_ArrowUp">
+      <summary>Arrow Up gesture.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCGestures.ETPC_ArrowDown">
+      <summary>Arrow Down gesture.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ESRITPCInkCollectionMode">
+      <summary>Ink collection mode enumeration.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCInkCollectionMode.ETPC_NotCollecting">
+      <summary>Not collecting ink or gestures.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCInkCollectionMode.ETPC_GesturesOnly">
+      <summary>Collecting gestures only.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCInkCollectionMode.ETPC_InkAndGestures">
+      <summary>Collecting ink and gestures.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.EditorExt.ESRITPCToolCommitType">
+      <summary>Ink tool commit mode enumeration.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCToolCommitType.ETPC_Manual">
+      <summary>Ink must be manually commited.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCToolCommitType.ETPC_AutoGraphic">
+      <summary>Ink is automatically commited as a graphic after a delay.</summary>
+    </member>
+    <member name="F:ESRI.ArcGIS.EditorExt.ESRITPCToolCommitType.ETPC_AutoText">
+      <summary>Ink is automatically commited as text after a delay.</summary>
+    </member>
+  </members>
+</doc>

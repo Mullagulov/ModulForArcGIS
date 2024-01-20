@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.LocationUI</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.LocationUI.IAddressFindData">
+      <summary>Provides access to members for inspecting address candidates in the Find dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.LocationUI.IAddressFindData.Geometry">
+      <summary>Geometry of the address candidate.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.LocationUI.IAddressFindData.Name">
+      <summary>Name of the address candidate.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.LocationUI.IAddressFindData.Values">
+      <summary>Properties of the address candidate.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.LocationUI.IAddressUI">
+      <summary>Provides access to members for opening locator user interface dialogs.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.IAddressUI.InteractiveReview(System.Int32,ESRI.ArcGIS.Geodatabase.ITable,ESRI.ArcGIS.Geodatabase.IQueryFilter,System.String,System.String,ESRI.ArcGIS.Geodatabase.IFeatureClass,System.String,System.String,ESRI.ArcGIS.Geodatabase.ILocator)">
+      <summary>Opens the Interactive Rematch dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.IAddressUI.MatchTableFromSet(System.Int32,ESRI.ArcGIS.esriSystem.ISet,ESRI.ArcGIS.Geodatabase.ITable,System.Boolean,ESRI.ArcGIS.Geodatabase.ILocator,System.String@)">
+      <summary>Opens the Geocode Addresses dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.IAddressUI.RematchTable(System.Int32,ESRI.ArcGIS.Geodatabase.IFeatureClass,System.String,System.String,ESRI.ArcGIS.Geodatabase.IFeatureClass,System.String,System.String,ESRI.ArcGIS.Geodatabase.ILocator)">
+      <summary>Opens the Review/Rematch Addresses dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.IAddressUI.RuntimeOptions(System.Int32,ESRI.ArcGIS.Geodatabase.ILocator,System.Boolean,System.String)">
+      <summary>Opens the Geocoding Options dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.LocationUI.IAddressUI2">
+      <summary>Provides access to members for opening locator user interface dialogs.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.IAddressUI2.ReadOnlyRuntimeOptions(System.Int32,ESRI.ArcGIS.Geodatabase.ILocator,System.String)">
+      <summary>Opens the Geocoding Options dialog in read-only mode.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.IAddressUI2.InteractiveReview(System.Int32,ESRI.ArcGIS.Geodatabase.ITable,ESRI.ArcGIS.Geodatabase.IQueryFilter,System.String,System.String,ESRI.ArcGIS.Geodatabase.IFeatureClass,System.String,System.String,ESRI.ArcGIS.Geodatabase.ILocator)">
+      <summary>Opens the Interactive Rematch dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.IAddressUI2.MatchTableFromSet(System.Int32,ESRI.ArcGIS.esriSystem.ISet,ESRI.ArcGIS.Geodatabase.ITable,System.Boolean,ESRI.ArcGIS.Geodatabase.ILocator,System.String@)">
+      <summary>Opens the Geocode Addresses dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.IAddressUI2.RematchTable(System.Int32,ESRI.ArcGIS.Geodatabase.IFeatureClass,System.String,System.String,ESRI.ArcGIS.Geodatabase.IFeatureClass,System.String,System.String,ESRI.ArcGIS.Geodatabase.ILocator)">
+      <summary>Opens the Review/Rematch Addresses dialog.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.IAddressUI2.RuntimeOptions(System.Int32,ESRI.ArcGIS.Geodatabase.ILocator,System.Boolean,System.String)">
+      <summary>Opens the Geocoding Options dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.LocationUI.IGxLocatorFilter">
+      <summary>Provides access to members that control which locators are displayed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.LocationUI.IGxLocatorFilter.ShowCreate">
+      <summary>Indicates whether to display the Create New Locator item.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.LocationUI.ILocatorExtension">
+      <summary>Provides access to members that control the set of locators in an ArcMap document.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.ILocatorExtension.AddLocator(ESRI.ArcGIS.Geodatabase.ILocator)">
+      <summary>Adds a locator to the ArcMap document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.LocationUI.ILocatorExtension.Categories">
+      <summary>Categories represented by the locators in the ArcMap document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.LocationUI.ILocatorExtension.CurrentLocator(System.String)">
+      <summary>Current locator in the ArcMap document of a specific category.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.LocationUI.ILocatorExtension.Locator(System.String,System.Int32)">
+      <summary>Locator in the ArcMap document.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.LocationUI.ILocatorExtension.LocatorCount(System.String)">
+      <summary>Number of locators in the ArcMap document in a specific category.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.ILocatorExtension.RemoveAllLocators">
+      <summary>Removes all locators from the ArcMap document.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.ILocatorExtension.RemoveCategory(System.String)">
+      <summary>Removes a category of locators from the ArcMap document.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.ILocatorExtension.RemoveLocator(System.String,System.Int32)">
+      <summary>Removes a locator from the ArcMap document.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.LocationUI.ILocatorExtensionEvents">
+      <summary>Provides access to events that occur when locators are added to or removed from an ArcMap document.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.LocationUI.ILocatorExtensionEvents_Event">
+      <summary>Provides access to events that occur when locators are added to or removed from an ArcMap document.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.ILocatorExtensionEvents.AllLocatorsRemoved">
+      <summary>All locators were removed from the ArcMap document.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.LocationUI.ILocatorExtensionEvents_Event.AllLocatorsRemoved">
+      <summary>All locators were removed from the ArcMap document.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.ILocatorExtensionEvents.CategoryRemoved(System.String)">
+      <summary>Category of locators was removed from the ArcMap document.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.LocationUI.ILocatorExtensionEvents_Event.CategoryRemoved">
+      <summary>Category of locators was removed from the ArcMap document.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.ILocatorExtensionEvents.CurrentLocatorChanged(System.String,System.Int32)">
+      <summary>Current locator for the ArcMap document was changed.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.LocationUI.ILocatorExtensionEvents_Event.CurrentLocatorChanged">
+      <summary>Current locator for the ArcMap document was changed.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.ILocatorExtensionEvents.LocatorAdded(System.String,ESRI.ArcGIS.Geodatabase.ILocator,System.Int32)">
+      <summary>Locator was added to the ArcMap document.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.LocationUI.ILocatorExtensionEvents_Event.LocatorAdded">
+      <summary>Locator was added to the ArcMap document.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.ILocatorExtensionEvents.LocatorRemoved(System.String,System.Int32)">
+      <summary>Locator was removed from the ArcMap document.</summary>
+    </member>
+    <member name="E:ESRI.ArcGIS.LocationUI.ILocatorExtensionEvents_Event.LocatorRemoved">
+      <summary>Locator was removed from the ArcMap document.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.LocationUI.ILocatorStyleUI">
+      <summary>Provides access to members for selecting a locator style.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.LocationUI.ILocatorStyleUI.CatalogPathForWorkspace">
+      <summary>Catalog path to remote database that has the locator style.  Blank for local locator styles.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.ILocatorStyleUI.DoModal(System.Int32)">
+      <summary>Opens a dialog for choosing a workspace and locator style.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.LocationUI.ILocatorStyleUI.LocatorName">
+      <summary>Name object for the selected locator style.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.LocationUI.ILocatorStyleUI.StyleName">
+      <summary>Name of the locator style selected.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.LocationUI.IProtectNameLocationUI">
+      <summary>Provides access to dummy methods protecting name correctness.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.IProtectNameLocationUI.ProtectOLE_COLOR(System.Int32)">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.IProtectNameLocationUI.ProtectOLE_HANDLE(System.Int32)">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.LocationUI.AddressFindData">
+      <summary>An address candidate from the Find dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.LocationUI.AddressFindDataClass">
+      <summary>An address candidate from the Find dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.LocationUI.AddressFindDataClass.Geometry">
+      <summary>Geometry of the address candidate.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.LocationUI.AddressFindDataClass.IAddressFindData_Geometry">
+      <summary>Geometry of the address candidate.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.LocationUI..">
+      <summary>An address candidate from the Find dialog. Constructor has no input arguments.</summary>
+    </member>
+    <member name="ESRI.ArcGIS.LocationUI.._">
+      <summary>An address candidate from the Find dialog. Constructor has no input arguments.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.LocationUI.AddressFindDataClass.#ctor">
+      <summary>An address candidate from the Find dialog. Constructor has no input arguments.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.LocationUI.AddressFindDataClass.Name">
+      <summary>Name of the address candidate.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.LocationUI.AddressFindDataClass.IAddressFindData_Name">
+      <summary>Name of the address candidate.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.LocationUI.AddressFindDataClass.Values">
+      <summary>Properties of the address candidate.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.LocationUI.AddressFindDataClass.IAddressFindData_Values">
+      <summary>Properties of the address candidate.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.LocationUI.AddressLocatorUI">
+      <summary>A user interface for an address locator.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.LocationUI.AddressLocatorUIClass">
+      <summary>A user interface for an address locator.</summary>
+    </member>
+  </members>
+</doc>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>ESRI.ArcGIS.DisplayUI</name>
+  </assembly>
+  <members>
+    <member name="T:ESRI.ArcGIS.DisplayUI.IChartSymbolEditor">
+      <summary>Provides access to members that control a dialog used to manage chart symbol properties .</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DisplayUI.IChartSymbolEditor.EditChartSymbol(ESRI.ArcGIS.Display.IChartSymbol@,System.Int32)">
+      <summary>Displays the chart symbol editor dialog for the given chart symbol and returns a value describing whether the symbol was changed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DisplayUI.IChartSymbolEditor.ShowUnits">
+      <summary>Indicates if the units combo box is displayed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DisplayUI.IChartSymbolEditor.Title">
+      <summary>Title of the chart symbol editor dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DisplayUI.ILegendSymbolEditor">
+      <summary>Provides access to members that control a dialog for managing properties associated with Legend Symbol.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DisplayUI.ILegendSymbolEditor.Applies(ESRI.ArcGIS.Display.ISymbol)">
+      <summary>Checks if the editor applies to the specified symbol.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DisplayUI.ILegendSymbolEditor.EditLegendSymbol(ESRI.ArcGIS.Display.ISymbol@,System.Int32)">
+      <summary>Displays the Legend Symbol Editor dialog for the given symbol and returns a flag indicating if the symbol changed.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DisplayUI.ILineDecorationEditor">
+      <summary>Provides access to members that control a dialog for managing properties associated with Line Decoration.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DisplayUI.ILineDecorationEditor.EditLineDecoration(ESRI.ArcGIS.Display.ILineDecoration@,ESRI.ArcGIS.Display.ILineSymbol,System.Int32)">
+      <summary>Displays the Line Decoration Editor dialog for the given symbol and returns a flag indicating if the symbol changed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DisplayUI.ILineDecorationEditor.ShowUnits">
+      <summary>Indicates whether to display the Units combo box.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DisplayUI.ILineDecorationEditor.Title">
+      <summary>The title of the Line Decoration Editor dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DisplayUI.IProtectNameDisplayUI">
+      <summary>Provides access to dummy methods protecting name correctness.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DisplayUI.IProtectNameDisplayUI.ProtectOLE_COLOR(System.Int32)">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DisplayUI.IProtectNameDisplayUI.ProtectOLE_HANDLE(System.Int32)">
+      <summary>See the ESRI SDK Help.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DisplayUI.IStyleDialog">
+      <summary>Provides access to members that control the Style Manager and Style References Dialogs.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DisplayUI.IStyleDialog.DoModal(ESRI.ArcGIS.Display.IStyleGallery,System.Int32)">
+      <summary>Displays a style dialog for the given style gallery.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DisplayUI.IStyleDialog.Title">
+      <summary>The title of the style dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DisplayUI.IStyleItemEditor">
+      <summary>Provides access to members that control the Style Item Editor.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DisplayUI.IStyleItemEditor.EditStyleItem(ESRI.ArcGIS.Display.IStyleGalleryItem,System.Int32)">
+      <summary>Displays the style item properties dialog for the given style gallery item.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DisplayUI.IStyleItemEditor.ReadOnly">
+      <summary>The read only property for the entire dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DisplayUI.IStyleItemEditor.ReadOnlyStyle">
+      <summary>The read only property for the style file of the style item dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DisplayUI.IStyleItemEditor.Style">
+      <summary>The style file for the style item dialog.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DisplayUI.IStyleItemEditor.Title">
+      <summary>The title of the style item dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DisplayUI.ISymbolEditor">
+      <summary>Provides access to members that control a dialog for editing symbols.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DisplayUI.ISymbolEditor.EditSymbol(ESRI.ArcGIS.Display.ISymbol@,System.Int32)">
+      <summary>Displays the Symbol Editor dialog for the given symbol and returns a flag indicating if the symbol changed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DisplayUI.ISymbolEditor.ShowUnits">
+      <summary>Indicates whether to display the Units combo box.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DisplayUI.ISymbolEditor.Title">
+      <summary>The title of the Symbol Editor dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DisplayUI.ISymbolPropertyPage">
+      <summary>Provides access to members that control a dialog for managing properties associated with Symbol properties.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DisplayUI.ISymbolPropertyPage.Units">
+      <summary>Units to display symbol properties in.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DisplayUI.ISymbolSelector">
+      <summary>Provides access to members that control a dialog for Symbol Selection.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DisplayUI.ISymbolSelector.AddSymbol(ESRI.ArcGIS.Display.ISymbol)">
+      <summary>Brings up a dialog for Adding a symbol.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DisplayUI.ISymbolSelector.GetSymbolAt(System.Int32)">
+      <summary>Gets the symbol at the given index.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DisplayUI.ISymbolSelector.SelectSymbol(System.Int32)">
+      <summary>Displays a dialog that lets the user select a symbol.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DisplayUI.ITextBackgroundEditor">
+      <summary>Provides access to members that control a dialog for managing properties associated with Text Background.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DisplayUI.ITextBackgroundEditor.EditTextBackground(ESRI.ArcGIS.Display.ITextBackground@,ESRI.ArcGIS.Display.ITextSymbol,System.Int32)">
+      <summary>Displays the Text Background Editor dialog for the given text background and returns a flag indicating if it changed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DisplayUI.ITextBackgroundEditor.ShowUnits">
+      <summary>Indicates whether to display the Units combo box.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DisplayUI.ITextBackgroundEditor.Title">
+      <summary>The title of the Text Background Editor dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DisplayUI.ITextSymbolEditor">
+      <summary>Provides access to members that control a dialog for editing Text Symbols.</summary>
+    </member>
+    <member name="M:ESRI.ArcGIS.DisplayUI.ITextSymbolEditor.EditTextSymbol(ESRI.ArcGIS.Display.ITextSymbol@,System.Int32)">
+      <summary>Displays the Text Symbol Editor dialog for the given text symbol and returns a flag indicating if it changed.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DisplayUI.ITextSymbolEditor.ShowUnits">
+      <summary>Indicates whether to display the Units combo box.</summary>
+    </member>
+    <member name="P:ESRI.ArcGIS.DisplayUI.ITextSymbolEditor.Title">
+      <summary>The title of the Text Symbol Editor dialog.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DisplayUI.AdvancedTextPropertyPage">
+      <summary>A dialog for managing properties associated with Advanced Text.</summary>
+    </member>
+    <member name="T:ESRI.ArcGIS.DisplayUI.AdvancedTextPropertyPageClass">
+      <summary>A dialog for managing properties associated with Advanced Text.</summary>
+    </member>
+  </members>
+</doc>
